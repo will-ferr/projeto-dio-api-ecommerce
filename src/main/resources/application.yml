@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: ecommerce-singleton
+  datasource:
+    url: jdbc:h2:mem:ecommerce;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    open-in-view: false
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: method
